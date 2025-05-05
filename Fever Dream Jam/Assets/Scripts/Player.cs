@@ -37,17 +37,16 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Hit End");
             controller.enabled = false;
-            transform.position += new Vector3(10, 0, -30);
+            transform.position += new Vector3(14, 0, -30);
             controller.enabled = true;
         }
 
         else if (other.tag == "Start Trigger")
         {
-            Debug.Log("Hit Start, position: " + transform.position);
+            Debug.Log("Hit Start");
             controller.enabled = false;
-            transform.position -= new Vector3(10, 0, -30);
+            transform.position -= new Vector3(14, 0, -30);
             controller.enabled = true;
-            Debug.Log("Position is now: " + transform.position);
         }
     }
 
