@@ -2289,6 +2289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1546276577}
   - {fileID: 193340344}
   - {fileID: 660147350}
   - {fileID: 14436943}
@@ -2301,7 +2302,6 @@ Transform:
   - {fileID: 1735804090}
   - {fileID: 600101027}
   - {fileID: 632245429}
-  - {fileID: 1546276577}
   - {fileID: 947938329}
   - {fileID: 1126089360}
   - {fileID: 1495236502}
@@ -2816,7 +2816,7 @@ GameObject:
   - component: {fileID: 1546276575}
   - component: {fileID: 1546276574}
   m_Layer: 0
-  m_Name: Wall4 (3)
+  m_Name: Disappearing Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
