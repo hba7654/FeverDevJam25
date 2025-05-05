@@ -7,12 +7,14 @@ public class Player : MonoBehaviour
     private Vector2 cameraRot;
     private CharacterController controller;
     private float xRot = 0;
+    private bool lookingBehind;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
 
     private void Start()
     {
+        lookingBehind = false;
         controller = GetComponent<CharacterController>();
     }
 
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
             moveInput.y * moveSpeed * Time.deltaTime));
 
         //Camera Look
-        Camera.main.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
+        Camera.main.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
         transform.Rotate(Vector3.up * cameraRot.x);
     }
 
@@ -58,5 +60,10 @@ public class Player : MonoBehaviour
         cameraRot = inputValue.Get<Vector2>() * mouseSensitivity * Time.deltaTime;
         xRot -= cameraRot.y;
         xRot = Mathf.Clamp(xRot, -60, 60);
+    }
+
+    public void OnLookBehind(InputValue inputValue)
+    {
+        lookingBehind = inputValue.isPressed;
     }
 }
