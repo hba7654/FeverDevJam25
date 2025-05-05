@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private Vector3 posToWarpTo;
     private Vector2 moveInput;
     private Vector2 cameraRot;
     private CharacterController controller;
@@ -15,7 +14,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        posToWarpTo = Vector3.zero;
     }
 
     private void Update()
