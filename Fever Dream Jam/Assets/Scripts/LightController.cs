@@ -6,7 +6,7 @@ public class LightController : MonoBehaviour
 
     private Light myLight;
 
-    public float minIntensity = 0.5f;
+    public float minIntensity = 0f;
     public float maxIntensity = 80.0f;
 
     void Start()
@@ -20,12 +20,14 @@ public class LightController : MonoBehaviour
     {
         float duration = Random.Range(0.1f, 5.0f);
         float t = 0f;
+        
         float startIntensity = myLight.intensity;
-        float targetIntensity = Random.Range(minIntensity, maxIntensity);
+         float targetIntensity = Random.Range(minIntensity, maxIntensity);
 
         while (t < duration)
         {
-            myLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, t / duration);
+              myLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, t / duration);
+            myLight.intensity = Random.Range(minIntensity, maxIntensity);
             t += Time.deltaTime;
             
         }
