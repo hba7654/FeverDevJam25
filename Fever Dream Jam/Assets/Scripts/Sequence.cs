@@ -6,6 +6,8 @@ public class Sequence : MonoBehaviour
     [SerializeField] Transform monsterSpawnPoint;
     [SerializeField] float monsterSpawnTimer;
 
+    [SerializeField] Sequence nextSequence;
+
     GameObject monsterInstance;
     float spawnTime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,5 +25,11 @@ public class Sequence : MonoBehaviour
         {
             monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity);
         }
+    }
+
+    void GoNextSequence()
+    {
+        nextSequence.gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

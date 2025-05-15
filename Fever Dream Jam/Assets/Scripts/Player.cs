@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private float xRot = 0;
     private bool lookingBehind;
 
+    private bool dreaming;
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
 
@@ -19,17 +21,31 @@ public class Player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        dreaming = false;
     }
 
     private void Update()
     {
-        //Movement
-        controller.Move(transform.TransformDirection(
-            moveInput.x * moveSpeed * Time.deltaTime,
-            0, 
-            moveInput.y * moveSpeed * Time.deltaTime));
+        //Movement - awake
+        if (!dreaming)
+        {
+            controller.Move(transform.TransformDirection(
+                moveInput.x * moveSpeed * Time.deltaTime,
+                0,
+                moveInput.y * moveSpeed * Time.deltaTime));
+        }
+        //Movement - dreaming
+        else
+        {
+            Camera.main.GetComponent<CharacterController>().Move(transform.TransformDirection(
+                moveInput.x * moveSpeed * Time.deltaTime,
+                0,
+                moveInput.y * moveSpeed * Time.deltaTime));
+        }
 
         //Camera Look
+        //FIX DREAMING ROTATION
         Camera.main.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
         transform.Rotate(Vector3.up * cameraRot.x);
     }
@@ -68,5 +84,14 @@ public class Player : MonoBehaviour
     public void OnLookBehind(InputValue inputValue)
     {
         lookingBehind = inputValue.isPressed;
+    }
+
+    public void OnDream(InputValue inputValue)
+    {
+        dreaming = !dreaming;
+        Camera.main.GetComponent<CharacterController>().enabled = false;
+        Camera.main.transform.position = transform.position;
+        Camera.main.GetComponent<CharacterController>().enabled = true;
+
     }
 }
