@@ -25,6 +25,9 @@ public class Sequence : MonoBehaviour
         {
             monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity);
         }
+
+        //if puzzle completed
+            // GoNextSequence();
     }
 
     void GoNextSequence()
