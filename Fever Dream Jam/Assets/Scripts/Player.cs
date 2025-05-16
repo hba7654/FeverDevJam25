@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private float yRot = 0;
     private bool lookingBehind;
 
-    private bool dreaming;
+    [HideInInspector] public bool dreaming;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;

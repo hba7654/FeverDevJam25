@@ -15,7 +15,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(canMove)
+        if(canMove || player.dreaming)
         {
             Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
             transform.LookAt(playerPos, Vector3.up);
