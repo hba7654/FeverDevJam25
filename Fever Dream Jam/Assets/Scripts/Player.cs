@@ -18,6 +18,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
 
+    [SerializeField] private GameObject sequence3_DreamItems;
+
+    private LayerMask layerMask;
+    private RaycastHit hit;
+    private Ray ray;
+
+
     private void Start()
     {
         cam = Camera.main;
@@ -29,6 +36,8 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
 
         dreaming = false;
+
+        layerMask = LayerMask.GetMask("Interactable", "Character");
     }
 
     private void Update()
@@ -61,6 +70,29 @@ public class Player : MonoBehaviour
         {
             cam.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
             //cam.transform.Rotate(Vector3.up * cameraRot.x);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        // Handles Raycasting 
+
+        // If it hits something
+        ray = new Ray(transform.position, transform.forward);
+
+        //Make a Sphere and throwing it in a direction seeing if anythinghits hit (.2 is sphere radius and 1 is the distnace it will travel)
+        if (Physics.SphereCast(cam.transform.position, .2f, cam.transform.forward, out hit, 1f, layerMask))
+        {
+            // Debug.DrawRay(cam.transform.position, cam.transform.forward * hit.distance, Color.yellow);
+            // Debug.Log("Did Hit");
+            // Debug.Log(hit.distance);
+           
+        }
+        // If it doesn't hit something
+        else
+        {
+            //Debug.DrawRay(cam.transform.position, cam.transform.forward * 1000, Color.white);
+            //Debug.Log("Did not Hit");
         }
     }
 
@@ -108,14 +140,26 @@ public class Player : MonoBehaviour
         cam.transform.position = transform.position;
         camController.enabled = true;
 
-        if(dreaming)
+        if (dreaming)
         {
             cam.transform.parent = null;
+            GameObject.FindGameObjectWithTag("Sequence").transform.GetChild(0).gameObject.SetActive(dreaming);
         }
         else
         {
             cam.transform.parent = transform;
+            GameObject.FindGameObjectWithTag("Sequence").transform.GetChild(0).gameObject.SetActive(dreaming);
         }
 
     }
+
+    public void OnInteract(InputValue inputValue)
+    {
+        // Check if it hit something
+        if (hit.collider != null)
+        {
+            Debug.Log("Interacted with an Object!");
+        }
+    }
+
 }

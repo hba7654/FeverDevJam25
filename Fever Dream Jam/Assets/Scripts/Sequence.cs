@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Sequence : MonoBehaviour
@@ -7,6 +9,8 @@ public class Sequence : MonoBehaviour
     [SerializeField] float monsterSpawnTimer;
 
     [SerializeField] Sequence nextSequence;
+
+    [SerializeField] private GameObject sequenceDreamItems;
 
     GameObject monsterInstance;
     float spawnTime;
@@ -21,18 +25,23 @@ public class Sequence : MonoBehaviour
     void Update()
     {
         spawnTime += Time.deltaTime;
-        if(monsterInstance != null && spawnTime >= monsterSpawnTimer)
+        if (monsterInstance != null && spawnTime >= monsterSpawnTimer)
         {
             monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity);
         }
 
         //if puzzle completed
-            // GoNextSequence();
+        // GoNextSequence();
     }
 
     void GoNextSequence()
     {
         nextSequence.gameObject.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    void ToggleDreamStateItems(bool active)
+    {
+      
     }
 }

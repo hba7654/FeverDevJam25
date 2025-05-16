@@ -6,6 +6,7 @@ TagManager:
   tags:
   - End Trigger
   - Start Trigger
+  - Sequence
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Walls
+  - Interactable
   - 
   - 
   - 
