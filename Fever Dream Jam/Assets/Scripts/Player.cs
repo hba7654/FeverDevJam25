@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    private Camera cam;
     private Vector2 moveInput;
     private Vector2 cameraRot;
     private CharacterController controller;
+    private CharacterController camController;
     private float xRot = 0;
+    private float yRot = 0;
     private bool lookingBehind;
 
     private bool dreaming;
@@ -17,8 +20,11 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        cam = Camera.main;
+
         lookingBehind = false;
         controller = GetComponent<CharacterController>();
+        camController = cam.GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -38,7 +44,7 @@ public class Player : MonoBehaviour
         //Movement - dreaming
         else
         {
-            Camera.main.GetComponent<CharacterController>().Move(transform.TransformDirection(
+            camController.Move(transform.TransformDirection(
                 moveInput.x * moveSpeed * Time.deltaTime,
                 0,
                 moveInput.y * moveSpeed * Time.deltaTime));
@@ -46,8 +52,16 @@ public class Player : MonoBehaviour
 
         //Camera Look
         //FIX DREAMING ROTATION
-        Camera.main.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
-        transform.Rotate(Vector3.up * cameraRot.x);
+        if (!dreaming)
+        {
+            cam.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
+            transform.Rotate(Vector3.up * cameraRot.x);
+        }
+        else
+        {
+            cam.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
+            //cam.transform.Rotate(Vector3.up * cameraRot.x);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -79,6 +93,7 @@ public class Player : MonoBehaviour
         cameraRot = inputValue.Get<Vector2>() * mouseSensitivity * Time.deltaTime;
         xRot -= cameraRot.y;
         xRot = Mathf.Clamp(xRot, -60, 60);
+        yRot += cameraRot.x;
     }
 
     public void OnLookBehind(InputValue inputValue)
@@ -89,9 +104,18 @@ public class Player : MonoBehaviour
     public void OnDream(InputValue inputValue)
     {
         dreaming = !dreaming;
-        Camera.main.GetComponent<CharacterController>().enabled = false;
-        Camera.main.transform.position = transform.position;
-        Camera.main.GetComponent<CharacterController>().enabled = true;
+        camController.enabled = false;
+        cam.transform.position = transform.position;
+        camController.enabled = true;
+
+        if(dreaming)
+        {
+            cam.transform.parent = null;
+        }
+        else
+        {
+            cam.transform.parent = transform;
+        }
 
     }
 }
