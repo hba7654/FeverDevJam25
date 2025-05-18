@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
                 moveInput.x * moveSpeed * Time.deltaTime,
                 0,
                 moveInput.y * moveSpeed * Time.deltaTime);
-            dreamMoveDir.y = 0;
+            //dreamMoveDir.y = 0;
             camController.Move(dreamMoveDir);
         }
 
