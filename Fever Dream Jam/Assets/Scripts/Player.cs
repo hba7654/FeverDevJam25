@@ -53,10 +53,12 @@ public class Player : MonoBehaviour
         //Movement - dreaming
         else
         {
-            camController.Move(transform.TransformDirection(
+            Vector3 dreamMoveDir = cam.transform.TransformDirection(
                 moveInput.x * moveSpeed * Time.deltaTime,
                 0,
-                moveInput.y * moveSpeed * Time.deltaTime));
+                moveInput.y * moveSpeed * Time.deltaTime);
+            dreamMoveDir.y = 0;
+            camController.Move(dreamMoveDir);
         }
 
         //Camera Look
