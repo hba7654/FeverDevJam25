@@ -1,6 +1,10 @@
+using NUnit.Framework;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
+using UnityEngine.UIElements;
+using System.Linq;
 
 public class Player : MonoBehaviour
 {
@@ -24,6 +28,9 @@ public class Player : MonoBehaviour
     private RaycastHit hit;
     private Ray ray;
 
+    // Temporary Sequence variables 
+    private List<string> sequence3Runes;
+    private List<string> sequence3SelectedRunes;
 
     private void Start()
     {
@@ -32,12 +39,16 @@ public class Player : MonoBehaviour
         lookingBehind = false;
         controller = GetComponent<CharacterController>();
         camController = cam.GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
 
         dreaming = false;
 
         layerMask = LayerMask.GetMask("Interactable", "Character");
+
+        // TEMP
+        sequence3Runes = new List<string> { "Rune(circle)", "CylinderRune", "TriangleRune" };
+        sequence3SelectedRunes = new List<string>();
     }
 
     private void Update()
@@ -160,7 +171,46 @@ public class Player : MonoBehaviour
         // Check if it hit something
         if (hit.collider != null)
         {
-            Debug.Log("Interacted with an Object!");
+           // Debug.Log("Interacted with " + hit.collider.gameObject.name);
+        }
+
+        if (GameObject.Find("Sequence 3"))
+        {
+            // Debug.Log("We are in sequnence 3!"); 
+            Sequence3Puzzle(hit.collider.gameObject.name);
+        }
+
+    }
+
+    // Handles sequence 3 puzzle
+    // Checks if the runes they have interacted with are in the list and tells us when the puzzle is complete
+    private void Sequence3Puzzle(string objectName)
+    {
+        if (sequence3Runes.Contains(objectName))
+        {
+            sequence3SelectedRunes.Add(objectName);
+            //   GameObject.Find(objectName).SetActive(false);
+            foreach (string rune in sequence3SelectedRunes)
+            {
+                Debug.Log(rune);
+            }
+            // Debug.Log("Correct!!!!!");
+        }
+
+        else
+        {
+           // foreach (string rune in sequence3SelectedRunes)
+          //  {
+                // GameObject.Find(rune).SetActive(true);
+          //  }
+
+            sequence3SelectedRunes.Clear();
+            Debug.Log("Not correct");
+        }
+
+        if (sequence3SelectedRunes.Count == 3) 
+        {
+            Debug.Log("Puzzle complete");
         }
     }
 
