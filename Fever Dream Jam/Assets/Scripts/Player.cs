@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     // Temporary Sequence variables 
     private List<string> sequence3Runes;
     private List<string> sequence3SelectedRunes;
+    private bool puzzleComplete;
 
     private void Start()
     {
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
         // TEMP
         sequence3Runes = new List<string> { "Rune(circle)", "CylinderRune", "TriangleRune" };
         sequence3SelectedRunes = new List<string>();
+        puzzleComplete = false;
     }
 
     private void Update()
@@ -117,6 +119,12 @@ public class Player : MonoBehaviour
             controller.enabled = false;
             transform.position += new Vector3(14, 0, -30);
             controller.enabled = true;
+
+            if (puzzleComplete)
+            {
+                sequence3_DreamItems.GetComponentInParent<Sequence>().GoNextSequence();
+                puzzleComplete = false;
+            }
         }
 
         else if (other.tag == "Start Trigger")
@@ -125,6 +133,12 @@ public class Player : MonoBehaviour
             controller.enabled = false;
             transform.position -= new Vector3(14, 0, -30);
             controller.enabled = true;
+
+            if (puzzleComplete)
+            {
+                sequence3_DreamItems.GetComponentInParent<Sequence>().GoNextSequence();
+                puzzleComplete = false;
+            }
         }
     }
 
@@ -211,6 +225,7 @@ public class Player : MonoBehaviour
         if (sequence3SelectedRunes.Count == 3) 
         {
             Debug.Log("Puzzle complete");
+            puzzleComplete = true;
         }
     }
 

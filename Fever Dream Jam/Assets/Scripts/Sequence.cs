@@ -34,7 +34,7 @@ public class Sequence : MonoBehaviour
         // GoNextSequence();
     }
 
-    void GoNextSequence()
+    public void GoNextSequence()
     {
         nextSequence.gameObject.SetActive(true);
         gameObject.SetActive(false);
