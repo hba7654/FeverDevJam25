@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
     private List<string> sequence3SelectedRunes;
     private bool puzzleComplete;
 
+    // Materials
+    private Material lightBlue_Material;
+    private Material black_Material;
+
     private void Start()
     {
         cam = Camera.main;
@@ -51,11 +55,14 @@ public class Player : MonoBehaviour
         layerMask = LayerMask.GetMask("Interactable", "Character");
 
         // TEMP
-        sequence3Runes = new List<string> { "Rune(circle)", "CylinderRune", "TriangleRune" };
+        sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
         sequence3SelectedRunes = new List<string>();
         puzzleComplete = false;
 
         print(cursor);
+
+        lightBlue_Material = Resources.Load("Runes/Materials/Light Blue.mat", typeof(Material)) as Material;
+        black_Material = Resources.Load("Runes/Materials/Black.mat", typeof(Material)) as Material;
     }
 
     private void Update()
@@ -215,20 +222,18 @@ public class Player : MonoBehaviour
         if (sequence3Runes.Contains(objectName))
         {
             sequence3SelectedRunes.Add(objectName);
-            //   GameObject.Find(objectName).SetActive(false);
-            foreach (string rune in sequence3SelectedRunes)
-            {
-                Debug.Log(rune);
-            }
-            // Debug.Log("Correct!!!!!");
+            GameObject.Find(objectName + "(hint)").GetComponent<MeshRenderer>().material = lightBlue_Material;
+            Debug.Log("Correct!!!!!");
         }
 
         else
         {
-           // foreach (string rune in sequence3SelectedRunes)
-          //  {
-                // GameObject.Find(rune).SetActive(true);
-          //  }
+
+             foreach (string rune in sequence3SelectedRunes)
+            {
+                GameObject.Find(rune + "(hint)").GetComponent<MeshRenderer>().material = black_Material;
+                Debug.Log(rune + "(hint)");
+            }
 
             sequence3SelectedRunes.Clear();
             Debug.Log("Not correct");
