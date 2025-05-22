@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -16,13 +17,15 @@ public class Player : MonoBehaviour
     private float xRot = 0;
     private float yRot = 0;
     private bool lookingBehind;
+    private bool aimingAtDO;
+    private GameObject dreamItems;
 
     [HideInInspector] public bool dreaming;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
+    [SerializeField] private UnityEngine.UI.Image cursor;
 
-    [SerializeField] private GameObject sequence3_DreamItems;
 
     private LayerMask layerMask;
     private RaycastHit hit;
@@ -51,6 +54,8 @@ public class Player : MonoBehaviour
         sequence3Runes = new List<string> { "Rune(circle)", "CylinderRune", "TriangleRune" };
         sequence3SelectedRunes = new List<string>();
         puzzleComplete = false;
+
+        print(cursor);
     }
 
     private void Update()
@@ -99,8 +104,11 @@ public class Player : MonoBehaviour
         if (Physics.SphereCast(cam.transform.position, .2f, cam.transform.forward, out hit, 1f, layerMask))
         {
             // Debug.DrawRay(cam.transform.position, cam.transform.forward * hit.distance, Color.yellow);
-            // Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             // Debug.Log(hit.distance);
+
+            aimingAtDO = true;
+            cursor.enabled = true;
            
         }
         // If it doesn't hit something
@@ -108,6 +116,9 @@ public class Player : MonoBehaviour
         {
             //Debug.DrawRay(cam.transform.position, cam.transform.forward * 1000, Color.white);
             //Debug.Log("Did not Hit");
+
+            aimingAtDO = false;
+            cursor.enabled = false;
         }
     }
 
@@ -122,7 +133,7 @@ public class Player : MonoBehaviour
 
             if (puzzleComplete)
             {
-                sequence3_DreamItems.GetComponentInParent<Sequence>().GoNextSequence();
+                SequenceManager.Instance.NextSequence();
                 puzzleComplete = false;
             }
         }
@@ -136,7 +147,7 @@ public class Player : MonoBehaviour
 
             if (puzzleComplete)
             {
-                sequence3_DreamItems.GetComponentInParent<Sequence>().GoNextSequence();
+                SequenceManager.Instance.NextSequence();
                 puzzleComplete = false;
             }
         }
@@ -170,28 +181,27 @@ public class Player : MonoBehaviour
         if (dreaming)
         {
             cam.transform.parent = null;
-            GameObject.FindGameObjectWithTag("Sequence").transform.GetChild(0).gameObject.SetActive(dreaming);
         }
         else
         {
             cam.transform.parent = transform;
-            GameObject.FindGameObjectWithTag("Sequence").transform.GetChild(0).gameObject.SetActive(dreaming);
         }
+        SequenceManager.Instance.ShowDreamObjects(dreaming);
 
     }
 
     public void OnInteract(InputValue inputValue)
     {
         // Check if it hit something
-        if (hit.collider != null)
+        if (aimingAtDO)
         {
-           // Debug.Log("Interacted with " + hit.collider.gameObject.name);
-        }
+            // Debug.Log("Interacted with " + hit.collider.gameObject.name);
 
-        if (GameObject.Find("Sequence 3"))
-        {
-            // Debug.Log("We are in sequnence 3!"); 
-            Sequence3Puzzle(hit.collider.gameObject.name);
+            if (SequenceManager.Instance.GetSequenceNumber() == 1) //Sequence 3
+            {
+                // Debug.Log("We are in sequnence 3!"); 
+                Sequence3Puzzle(hit.collider.gameObject.name);
+            }
         }
 
     }
@@ -200,6 +210,8 @@ public class Player : MonoBehaviour
     // Checks if the runes they have interacted with are in the list and tells us when the puzzle is complete
     private void Sequence3Puzzle(string objectName)
     {
+        Debug.Log(objectName);
+
         if (sequence3Runes.Contains(objectName))
         {
             sequence3SelectedRunes.Add(objectName);
