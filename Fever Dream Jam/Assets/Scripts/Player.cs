@@ -37,8 +37,11 @@ public class Player : MonoBehaviour
     private bool puzzleComplete;
 
     // Materials
-    private Material lightBlue_Material;
-    private Material black_Material;
+    // private Material lightBlue_Material;
+    // private Material black_Material;
+
+    [SerializeField] private Material lightBlue_Material;
+    [SerializeField] private Material black_Material;
 
     private void Start()
     {
@@ -61,8 +64,9 @@ public class Player : MonoBehaviour
 
         print(cursor);
 
-        lightBlue_Material = Resources.Load("Runes/Materials/Light Blue.mat", typeof(Material)) as Material;
-        black_Material = Resources.Load("Runes/Materials/Black.mat", typeof(Material)) as Material;
+        
+       // lightBlue_Material = Resources.Load("Light Blue.mat", typeof(Material)) as Material;
+       // black_Material = Resources.Load("3D Assets/Runes/Materials/Black.mat", typeof(Material)) as Material;
     }
 
     private void Update()
