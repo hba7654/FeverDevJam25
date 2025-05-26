@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     // Temporary Sequence variables 
     private List<string> sequence3Runes;
     private List<string> sequence3SelectedRunes;
-    private bool puzzleComplete;
+    [HideInInspector] public bool puzzleComplete;
 
     // Materials
     // private Material lightBlue_Material;
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
             // Debug.Log(hit.distance);
 
             aimingAtDO = true;
-            cursor.enabled = true;
+            cursor.gameObject.SetActive(true);
            
         }
         // If it doesn't hit something
@@ -129,7 +129,7 @@ public class Player : MonoBehaviour
             //Debug.Log("Did not Hit");
 
             aimingAtDO = false;
-            cursor.enabled = false;
+            cursor.gameObject.SetActive(false);
         }
     }
 
