@@ -36,6 +36,11 @@ public class Player : MonoBehaviour
     private List<string> sequence3SelectedRunes;
     [HideInInspector] public bool puzzleComplete;
 
+    // Sequence 25 variables
+    [SerializeField] private GameObject padLock;
+    [SerializeField] private List<Texture> runePics;
+    private int currentCombo;
+
     // Materials
     // private Material lightBlue_Material;
     // private Material black_Material;
@@ -61,12 +66,13 @@ public class Player : MonoBehaviour
         sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
         sequence3SelectedRunes = new List<string>();
         puzzleComplete = false;
+        currentCombo = 0;
 
         print(cursor);
 
-        
-       // lightBlue_Material = Resources.Load("Light Blue.mat", typeof(Material)) as Material;
-       // black_Material = Resources.Load("3D Assets/Runes/Materials/Black.mat", typeof(Material)) as Material;
+
+        // lightBlue_Material = Resources.Load("Light Blue.mat", typeof(Material)) as Material;
+        // black_Material = Resources.Load("3D Assets/Runes/Materials/Black.mat", typeof(Material)) as Material;
     }
 
     private void Update()
@@ -120,7 +126,7 @@ public class Player : MonoBehaviour
 
             aimingAtDO = true;
             cursor.gameObject.SetActive(true);
-           
+
         }
         // If it doesn't hit something
         else
@@ -206,22 +212,30 @@ public class Player : MonoBehaviour
         // Check if it hit something
         if (aimingAtDO)
         {
-            // Debug.Log("Interacted with " + hit.collider.gameObject.name);
+            Debug.Log("Interacted with " + hit.collider.gameObject.name);
 
-            if (SequenceManager.Instance.GetSequenceNumber() == 1) //Sequence 3
+            if (SequenceManager.Instance.GetSequenceNumber() == 1 && hit.collider.gameObject.tag == "rune") //Sequence 3
             {
                 // Debug.Log("We are in sequnence 3!"); 
                 Sequence3Puzzle(hit.collider.gameObject.name);
             }
+
+            if (hit.collider.gameObject.name == "Padlock") //Sequence 25
+            {
+                Debug.Log("We are IN!!!!");
+                padLock.SetActive(true);
+            }
+
         }
 
     }
 
+    #region Seqeunce 3 methods
     // Handles sequence 3 puzzle
     // Checks if the runes they have interacted with are in the list and tells us when the puzzle is complete
     private void Sequence3Puzzle(string objectName)
     {
-        Debug.Log(objectName);
+        // Debug.Log(objectName);
 
         if (sequence3Runes.Contains(objectName))
         {
@@ -233,7 +247,7 @@ public class Player : MonoBehaviour
         else
         {
 
-             foreach (string rune in sequence3SelectedRunes)
+            foreach (string rune in sequence3SelectedRunes)
             {
                 GameObject.Find(rune + "(hint)").GetComponent<MeshRenderer>().material = black_Material;
                 Debug.Log(rune + "(hint)");
@@ -243,11 +257,46 @@ public class Player : MonoBehaviour
             Debug.Log("Not correct");
         }
 
-        if (sequence3SelectedRunes.Count == 3) 
+        if (sequence3SelectedRunes.Count == 3)
         {
             Debug.Log("Puzzle complete");
             puzzleComplete = true;
         }
     }
+    #endregion
 
+    #region Sequence 25 methods
+    private void Sequence25Door()
+    {
+
+    }
+
+    public void PadlockUp()
+    {
+        if (currentCombo + 1 == 8)
+        {
+            currentCombo = 0;
+        }
+        else
+        {
+            currentCombo++;
+        }
+        Debug.Log(currentCombo);
+        GameObject.Find("RunePic").GetComponent<RawImage>().texture = runePics[currentCombo];
+    }
+
+    public void PadlockDown()
+    {
+        if (currentCombo - 1 == -1)
+        {
+            currentCombo = 7;
+        }
+        else
+        {
+            currentCombo--;
+        }
+
+        GameObject.Find("RunePic").GetComponent<RawImage>().texture = runePics[currentCombo];
+    }
+    #endregion
 }

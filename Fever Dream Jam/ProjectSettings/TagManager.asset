@@ -7,6 +7,7 @@ TagManager:
   - End Trigger
   - Start Trigger
   - Sequence
+  - rune
   layers:
   - Default
   - TransparentFX
