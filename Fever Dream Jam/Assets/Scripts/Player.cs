@@ -145,9 +145,11 @@ public class Player : MonoBehaviour
         if (other.tag == "End Trigger")
         {
             Debug.Log("Hit End");
+            GetComponent<CapsuleCollider>().enabled = false;
             controller.enabled = false;
             transform.position += new Vector3(14, 0, -30);
             controller.enabled = true;
+            GetComponent<CapsuleCollider>().enabled = true;
 
             if (puzzleComplete)
             {
@@ -158,10 +160,12 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "Start Trigger")
         {
+            GetComponent<CapsuleCollider>().enabled = false;
             Debug.Log("Hit Start");
             controller.enabled = false;
             transform.position -= new Vector3(14, 0, -30);
             controller.enabled = true;
+            GetComponent<CapsuleCollider>().enabled = true;
 
             if (puzzleComplete)
             {
@@ -205,6 +209,7 @@ public class Player : MonoBehaviour
             cam.transform.parent = transform;
         }
         cam.GetComponent<CameraTPer>().enabled = dreaming;
+        cam.GetComponent<BoxCollider>().enabled = dreaming;
         SequenceManager.Instance.ShowDreamObjects(dreaming);
 
     }
@@ -222,8 +227,4 @@ public class Player : MonoBehaviour
         }
 
     }
-
-    #region Sequence 25 methods
-    
-    #endregion
 }

@@ -2,17 +2,23 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    [SerializeField] Player player;
     [SerializeField] float speed;
     [SerializeField] Material visible;
     [SerializeField] Material invisible;
 
     private bool canMove;
-    [HideInInspector] public bool forceFreeze;
+    private bool forceFreeze;
+
+    public Player player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        
+    }
+
+    public void ForceFreeze(bool val)
+    {
+        forceFreeze = val;
     }
 
     // Update is called once per frame

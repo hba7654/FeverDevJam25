@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Sequence : MonoBehaviour
 {
@@ -13,7 +14,11 @@ public class Sequence : MonoBehaviour
 
     [SerializeField] private GameObject sequenceDreamItems;
 
-    GameObject monsterInstance;
+
+    [SerializeField] protected UnityEvent OnPuzzleCompleted;
+    [SerializeField] protected UnityEvent OnStep1Completed;
+
+    public static Monster monsterInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,18 +36,19 @@ public class Sequence : MonoBehaviour
     {
         nextSequence.gameObject.SetActive(true);
         gameObject.SetActive(false);
-    }
-
-    void ToggleDreamStateItems(bool active)
-    {
-      
+        if (monsterInstance)
+        {
+            Destroy(monsterInstance);
+            monsterInstance = null;
+        }
     }
 
     public void SpawnMonster()
     {
         if (monsterInstance != null)
         {
-            monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity);
+            monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity).GetComponent<Monster>();
+            monsterInstance.player = player;
         }
     }
 }

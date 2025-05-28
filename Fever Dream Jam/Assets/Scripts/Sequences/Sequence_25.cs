@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Sequence_25 : MonoBehaviour
+public class Sequence_25 : Sequence
 {
     //[SerializeField] private GameObject padLock;
     [SerializeField] private List<Texture> runePics;

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SequenceManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SequenceManager : MonoBehaviour
 
     [SerializeField] private int startingSequenceNum;
     [SerializeField] private Sequence[] sequences;
+
+    [SerializeField] private Interactable journalInteractable;
 
 
 
@@ -31,6 +34,7 @@ public class SequenceManager : MonoBehaviour
 
         sequenceNumber = startingSequenceNum;
         curSequence = sequences[sequenceNumber];
+        curSequence.gameObject.SetActive(true);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,6 +58,7 @@ public class SequenceManager : MonoBehaviour
         curSequence.GoNextSequence();
 
         curSequence = sequences[++sequenceNumber];
+        journalInteractable.enabled = true;
     }
 
     public void ShowDreamObjects(bool show)

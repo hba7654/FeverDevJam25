@@ -8,6 +8,7 @@ TagManager:
   - Start Trigger
   - Sequence
   - rune
+  - Interactable
   layers:
   - Default
   - TransparentFX

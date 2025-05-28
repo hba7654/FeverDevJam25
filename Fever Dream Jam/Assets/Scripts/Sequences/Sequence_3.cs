@@ -10,6 +10,15 @@ public class Sequence_3 : Sequence
     [SerializeField] private Material lightBlue_Material;
     [SerializeField] private Material black_Material;
 
+    //if you wanna add new events for more steps you do so like this
+    //[SerializeField] private UnityEvent OnStepXCompleted
+    //
+    //and then call it wherever you want it to happen like this
+    //OnStepXCompleted?.Invoke();
+    //
+    //The '?' is making sure OnStepXCompleted is not null, the same as
+    //  doing if(OnStepXCompleted != null) {OnStepXCompleted.Invoke();}
+
     private void Start()
     {
         sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
@@ -46,6 +55,8 @@ public class Sequence_3 : Sequence
             Debug.Log("Puzzle complete");
             seq3Complete = true;
             player.puzzleComplete = true;
+
+            OnPuzzleCompleted?.Invoke();
         }
     }
 }
