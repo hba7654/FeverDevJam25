@@ -11,6 +11,10 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject journalPanel;
     [SerializeField] GameObject pausePanel;
 
+    [SerializeField] Player player;
+    public Monster monster;
+
+
     public void OnJournal(InputValue inputValue)
     {
         if (!paused) {
@@ -24,9 +28,11 @@ public class UIController : MonoBehaviour
         journal = false;
         paused = !paused;
 
-        Cursor.visible = paused;
-        if (paused) { Cursor.lockState = CursorLockMode.None;}
-        else { Cursor.lockState = CursorLockMode.Locked; }
+        player.canRotate = !paused;
+        monster.forceFreeze = paused;
+        //Cursor.visible = paused;
+        //if (paused) { Cursor.lockState = CursorLockMode.None;}
+        //else { Cursor.lockState = CursorLockMode.Locked; }
 
         pausePanel.SetActive(paused);
     }
@@ -35,4 +41,11 @@ public class UIController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Freeze(bool val)
+    {
+        player.canRotate = !val;
+        monster.forceFreeze = val;
+    }
+
 }

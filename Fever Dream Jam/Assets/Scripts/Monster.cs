@@ -7,7 +7,8 @@ public class Monster : MonoBehaviour
     [SerializeField] Material visible;
     [SerializeField] Material invisible;
 
-    [HideInInspector] public bool canMove;
+    private bool canMove;
+    [HideInInspector] public bool forceFreeze;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +18,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(canMove)
+        if(canMove && !forceFreeze)
         {
             Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
             transform.LookAt(playerPos, Vector3.up);

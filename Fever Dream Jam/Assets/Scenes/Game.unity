@@ -259,6 +259,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30175632, y: 0.10275307, z: 0.57413864}
   m_Center: {x: -0.03808292, y: 0.000019075349, z: 0.04362358}
+--- !u!114 &28980971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28980964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Fehu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &72900371
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,11 +331,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
   nextSequence: {fileID: 0}
   sequenceDreamItems: {fileID: 731244362}
+--- !u!1 &78066014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
+  m_PrefabInstance: {fileID: 2119858334323152691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &78066015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3626389220432391520, guid: 931593229f0b7be49941716b19586552, type: 3}
+  m_PrefabInstance: {fileID: 2119858334323152691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78066014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910f52462fda5f945ad87aa7039aa7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &80463281
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +421,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.39103365, y: 0.102753066, z: 0.5501336}
   m_Center: {x: 0.024153918, y: 0.000038146973, z: -0.00032359362}
+--- !u!114 &118038148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118038141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Kaunan
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &125168423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1379,6 +1449,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca96c0f4042518c44882d3b67ac71023, type: 3}
       insertIndex: -1
       addedObject: {fileID: 653198223}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca96c0f4042518c44882d3b67ac71023, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 653198226}
   m_SourcePrefab: {fileID: 100100000, guid: ca96c0f4042518c44882d3b67ac71023, type: 3}
 --- !u!1 &258083964
 GameObject:
@@ -2236,6 +2309,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.388678, y: 0.10275308, z: 0.5615165}
   m_Center: {x: -0.00081603974, y: -0.000019550323, z: -0.001711339}
+--- !u!114 &374009917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374009910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jera
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &386045925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5e404cf74b63f4745b3a1189f7cb7385, type: 3}
@@ -2324,13 +2424,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockUp
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockUp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 934763649}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3028,13 +3140,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockUp
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockUp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 200977721}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3307,14 +3431,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 478307242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 059fb5253e30e75439041a358da3db1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
+  player: {fileID: 0}
+  monsterGO: {fileID: 78066014}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
   nextSequence: {fileID: 983093793}
   sequenceDreamItems: {fileID: 2138692030}
+  seq3Complete: 0
+  lightBlue_Material: {fileID: 2100000, guid: bfc3dbf5502bfc24ea97050596469184, type: 2}
+  black_Material: {fileID: 2100000, guid: b458367e26a8aa248a148857c973305d, type: 2}
 --- !u!1 &486424754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3549,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.38397664, y: 0.102753066, z: 0.51300955}
   m_Center: {x: -0.0010097846, y: -0.0000038146973, z: 0.0034880787}
+--- !u!114 &487503754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487503747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Dagaz
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &489744868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,6 +3638,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.28553885, y: 0.102753066, z: 0.5767485}
   m_Center: {x: -0.05597176, y: 0.000038146973, z: 0.0061641186}
+--- !u!114 &490003931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490003924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Thurisaz
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &494627205
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,6 +3730,7 @@ RectTransform:
   - {fileID: 410173134}
   - {fileID: 542996755}
   - {fileID: 80463282}
+  - {fileID: 1120282930}
   m_Father: {fileID: 1364693513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3606,6 +3788,7 @@ GameObject:
   - component: {fileID: 527058083}
   - component: {fileID: 527058082}
   - component: {fileID: 527058081}
+  - component: {fileID: 527058085}
   m_Layer: 7
   m_Name: Padlock
   m_TagString: Untagged
@@ -3705,6 +3888,45 @@ Transform:
   - {fileID: 1364693513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527058085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527058080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1871846869}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Freeze
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1364693512}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &528517147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4596,6 +4818,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7cfb03c79d86d5240847de50a3a15c4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 28980968}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7cfb03c79d86d5240847de50a3a15c4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28980971}
   m_SourcePrefab: {fileID: 100100000, guid: 7cfb03c79d86d5240847de50a3a15c4e, type: 3}
 --- !u!1 &632245428
 GameObject:
@@ -4947,22 +5172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dreaming: 0
+  canRotate: 0
+  puzzleComplete: 0
   moveSpeed: 5
   mouseSensitivity: 5
   cursor: {fileID: 486424756}
-  puzzleComplete: 0
-  padLock: {fileID: 1364693512}
-  runePics:
-  - {fileID: 2800000, guid: 445ab7798e76e2844bed0ce440381680, type: 3}
-  - {fileID: 2800000, guid: e1a5123488ac13f41a0b46d71b86b54f, type: 3}
-  - {fileID: 2800000, guid: db6566a0ca43c7d4d95919b172ebd8fc, type: 3}
-  - {fileID: 2800000, guid: 58cca7da880320f46994a1a6624f8d71, type: 3}
-  - {fileID: 2800000, guid: d45566f3139465e47af278854b01699d, type: 3}
-  - {fileID: 2800000, guid: c99858876adecaa4f9816327d637669f, type: 3}
-  - {fileID: 2800000, guid: 705d075f4ba3a3944b6dac42e551c207, type: 3}
-  - {fileID: 2800000, guid: 1f39024be5cbe3040883ed4975f6f059, type: 3}
-  lightBlue_Material: {fileID: 2100000, guid: bfc3dbf5502bfc24ea97050596469184, type: 2}
-  black_Material: {fileID: 2100000, guid: b458367e26a8aa248a148857c973305d, type: 2}
 --- !u!114 &642964038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5125,6 +5339,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.34479403, y: 0.102753066, z: 0.5771243}
   m_Center: {x: -0.04099577, y: 0.000013355166, z: -0.002631843}
+--- !u!114 &653198226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653198219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pertho
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &653321957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 09b6ae3c92bd3f949ba8c3f96e2a76f2, type: 3}
@@ -5156,6 +5397,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3414486, y: 0.10275309, z: 0.5747161}
   m_Center: {x: -0.04275209, y: -0.000024797395, z: -0.011733832}
+--- !u!114 &653321964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653321957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Raido
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &664107900
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,6 +5770,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3414087, y: 0.10275306, z: 0.5758833}
   m_Center: {x: -0.042643577, y: 0.000007867813, z: 0.002175212}
+--- !u!114 &773238077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773238070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Berkana
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &785086328
 GameObject:
   m_ObjectHideFlags: 0
@@ -6191,6 +6486,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37d9fc735ee61ee4f8f6050e1c321d5e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 118038145}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37d9fc735ee61ee4f8f6050e1c321d5e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 118038148}
   m_SourcePrefab: {fileID: 100100000, guid: 37d9fc735ee61ee4f8f6050e1c321d5e, type: 3}
 --- !u!1 &848511674
 GameObject:
@@ -6572,6 +6870,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d5aee0f29a74af848bec55a87471e837, type: 3}
       insertIndex: -1
       addedObject: {fileID: 487503751}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d5aee0f29a74af848bec55a87471e837, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 487503754}
   m_SourcePrefab: {fileID: 100100000, guid: d5aee0f29a74af848bec55a87471e837, type: 3}
 --- !u!4 &926341568 stripped
 Transform:
@@ -6907,6 +7208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983093792}
   - component: {fileID: 983093793}
+  - component: {fileID: 983093794}
   m_Layer: 0
   m_Name: Sequence 25
   m_TagString: Sequence
@@ -6942,11 +7244,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
   nextSequence: {fileID: 1869315335}
   sequenceDreamItems: {fileID: 433087042}
+--- !u!114 &983093794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983093791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1411c7299039f947bb688cf233ff60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runePics:
+  - {fileID: 2800000, guid: 445ab7798e76e2844bed0ce440381680, type: 3}
+  - {fileID: 2800000, guid: e1a5123488ac13f41a0b46d71b86b54f, type: 3}
+  - {fileID: 2800000, guid: db6566a0ca43c7d4d95919b172ebd8fc, type: 3}
+  - {fileID: 2800000, guid: 58cca7da880320f46994a1a6624f8d71, type: 3}
+  - {fileID: 2800000, guid: d45566f3139465e47af278854b01699d, type: 3}
+  - {fileID: 2800000, guid: c99858876adecaa4f9816327d637669f, type: 3}
+  - {fileID: 2800000, guid: 705d075f4ba3a3944b6dac42e551c207, type: 3}
+  - {fileID: 2800000, guid: 1f39024be5cbe3040883ed4975f6f059, type: 3}
 --- !u!1 &985894446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7404,6 +7727,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.34605736, y: 0.102753095, z: 0.58151}
   m_Center: {x: -0.06278259, y: 0.000034334138, z: 0.030165352}
+--- !u!114 &1057886895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057886888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Wunjo
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1071800217
 GameObject:
   m_ObjectHideFlags: 0
@@ -7596,13 +7946,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockUp
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockUp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 868731730}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7645,6 +8007,151 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108148120}
+  m_CullTransparentMesh: 1
+--- !u!1 &1120282929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120282930}
+  - component: {fileID: 1120282933}
+  - component: {fileID: 1120282932}
+  - component: {fileID: 1120282931}
+  m_Layer: 5
+  m_Name: Close
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1120282930
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120282929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1284189402}
+  m_Father: {fileID: 505340285}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -165}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1120282931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120282929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1120282932}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1871846869}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Freeze
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1364693512}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1120282932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120282929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1120282933
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120282929}
   m_CullTransparentMesh: 1
 --- !u!1 &1126089356
 GameObject:
@@ -7990,6 +8497,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e42aa26a800051a42b5d74a0648d6afe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 490003928}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e42aa26a800051a42b5d74a0648d6afe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 490003931}
   m_SourcePrefab: {fileID: 100100000, guid: e42aa26a800051a42b5d74a0648d6afe, type: 3}
 --- !u!1 &1152113420 stripped
 GameObject:
@@ -8342,6 +8852,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 09b6ae3c92bd3f949ba8c3f96e2a76f2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 653321961}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 09b6ae3c92bd3f949ba8c3f96e2a76f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 653321964}
   m_SourcePrefab: {fileID: 100100000, guid: 09b6ae3c92bd3f949ba8c3f96e2a76f2, type: 3}
 --- !u!1 &1228475367
 GameObject:
@@ -8396,7 +8909,7 @@ MonoBehaviour:
   startingSequenceNum: 1
   sequences:
   - {fileID: 2015792832}
-  - {fileID: 478307244}
+  - {fileID: 0}
   - {fileID: 983093793}
   - {fileID: 1869315335}
   - {fileID: 1503475137}
@@ -8649,6 +9162,142 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277487792}
+  m_CullTransparentMesh: 1
+--- !u!1 &1284189401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284189402}
+  - component: {fileID: 1284189404}
+  - component: {fileID: 1284189403}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1284189402
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284189401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1120282930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1284189403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284189401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Close
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1284189404
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284189401}
   m_CullTransparentMesh: 1
 --- !u!1 &1313816613
 GameObject:
@@ -9032,13 +9681,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockDown
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockDown
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 934763649}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9165,13 +9826,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockDown
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockDown
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628664143}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9430,6 +10103,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c7d3998f16659f4787c78a7f3be2a15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 773238074}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c7d3998f16659f4787c78a7f3be2a15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 773238077}
   m_SourcePrefab: {fileID: 100100000, guid: 5c7d3998f16659f4787c78a7f3be2a15, type: 3}
 --- !u!1001 &1458185471
 PrefabInstance:
@@ -9605,13 +10281,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockDown
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockDown
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 200977721}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9764,6 +10452,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.39282167, y: 0.10275309, z: 0.5132617}
   m_Center: {x: 0.0023150519, y: 0.00007629767, z: 0.053638306}
+--- !u!114 &1465128309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465128302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Algiz
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1468936872
 GameObject:
   m_ObjectHideFlags: 0
@@ -10025,6 +10740,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28bf0f622c2c3e04fb1357be1d9e4f3b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1629732253}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28bf0f622c2c3e04fb1357be1d9e4f3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1629732256}
   m_SourcePrefab: {fileID: 100100000, guid: 28bf0f622c2c3e04fb1357be1d9e4f3b, type: 3}
 --- !u!1 &1487884703
 GameObject:
@@ -10315,9 +11033,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
   nextSequence: {fileID: 72900373}
   sequenceDreamItems: {fileID: 489744868}
 --- !u!1 &1503539967 stripped
@@ -10351,6 +11069,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3977883, y: 0.10275308, z: 0.39778838}
   m_Center: {x: -0.000000007450581, y: 0.00000047683716, z: -0.0000005662441}
+--- !u!114 &1503539974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503539967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Inguz
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1524558258
 GameObject:
   m_ObjectHideFlags: 0
@@ -10960,6 +11705,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e404cf74b63f4745b3a1189f7cb7385, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1057886892}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5e404cf74b63f4745b3a1189f7cb7385, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057886895}
   m_SourcePrefab: {fileID: 100100000, guid: 5e404cf74b63f4745b3a1189f7cb7385, type: 3}
 --- !u!1 &1628664141
 GameObject:
@@ -11064,6 +11812,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.38647982, y: 0.102753036, z: 0.50278604}
   m_Center: {x: -0.0025063984, y: 0.000021219254, z: -0.012483984}
+--- !u!114 &1629732256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629732249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404bae01e0e11714c8485779e49ca32a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteracted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 478307244}
+        m_TargetAssemblyTypeName: Sequence_3, Assembly-CSharp
+        m_MethodName: Sequence3Puzzle
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Othilla
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1640448867
 GameObject:
   m_ObjectHideFlags: 0
@@ -11311,6 +12086,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cda6b02b6683c349a33f4c4ddb3b2be, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1503539971}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cda6b02b6683c349a33f4c4ddb3b2be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503539974}
   m_SourcePrefab: {fileID: 100100000, guid: 6cda6b02b6683c349a33f4c4ddb3b2be, type: 3}
 --- !u!1 &1735804086
 GameObject:
@@ -11503,13 +12281,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockDown
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockDown
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 868731730}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11782,9 +12572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
   nextSequence: {fileID: 1503475137}
   sequenceDreamItems: {fileID: 949567936}
 --- !u!1 &1871846868
@@ -11822,6 +12612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   journalPanel: {fileID: 994424514}
   pausePanel: {fileID: 1814069987}
+  player: {fileID: 642964036}
+  monster: {fileID: 78066015}
 --- !u!114 &1871846870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12016,6 +12808,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 022e8a1f77bfee845a9580d6735f0cb2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1465128306}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 022e8a1f77bfee845a9580d6735f0cb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1465128309}
   m_SourcePrefab: {fileID: 100100000, guid: 022e8a1f77bfee845a9580d6735f0cb2, type: 3}
 --- !u!1001 &1891028256
 PrefabInstance:
@@ -12314,13 +13109,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 642964036}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PadlockUp
-        m_Mode: 1
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983093794}
+        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
+        m_MethodName: PadlockUp
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1628664143}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.RawImage, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12735,10 +13542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323468a8bd0bb144ba10239156ac72a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   monsterGO: {fileID: 1316565789999733940, guid: 931593229f0b7be49941716b19586552, type: 3}
   monsterSpawnPoint: {fileID: 0}
-  monsterSpawnTimer: 0
-  nextSequence: {fileID: 478307244}
+  nextSequence: {fileID: 0}
   sequenceDreamItems: {fileID: 494627205}
 --- !u!1001 &2043344264
 PrefabInstance:
@@ -12880,6 +13687,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3be5af4a467a6624b936fdaf32edf94e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 374009914}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3be5af4a467a6624b936fdaf32edf94e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374009917}
   m_SourcePrefab: {fileID: 100100000, guid: 3be5af4a467a6624b936fdaf32edf94e, type: 3}
 --- !u!1 &2074957243
 GameObject:

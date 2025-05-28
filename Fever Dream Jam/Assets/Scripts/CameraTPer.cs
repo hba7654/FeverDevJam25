@@ -4,10 +4,12 @@ using UnityEngine.InputSystem.XR;
 public class CameraTPer : MonoBehaviour
 {
     CharacterController controller;
+    Player player; 
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        player = GetComponentInParent<Player>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +21,7 @@ public class CameraTPer : MonoBehaviour
             transform.position += new Vector3(14, 0, -30);
             controller.enabled = true;
 
-            if (transform.parent.GetComponent<Player>().puzzleComplete)
+            if (player.puzzleComplete)
             {
                 SequenceManager.Instance.NextSequence();
                 transform.parent.GetComponent<Player>().puzzleComplete = false;
@@ -33,7 +35,7 @@ public class CameraTPer : MonoBehaviour
             transform.position -= new Vector3(14, 0, -30);
             controller.enabled = true;
 
-            if (transform.parent.GetComponent<Player>().puzzleComplete)
+            if (player.puzzleComplete)
             {
                 SequenceManager.Instance.NextSequence();
                 transform.parent.GetComponent<Player>().puzzleComplete = false;

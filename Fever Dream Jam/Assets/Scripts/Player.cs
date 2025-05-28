@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private GameObject dreamItems;
 
     [HideInInspector] public bool dreaming;
+    [HideInInspector] public bool canRotate;
+    [HideInInspector] public bool puzzleComplete;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
@@ -32,27 +34,20 @@ public class Player : MonoBehaviour
     private Ray ray;
 
     // Temporary Sequence variables 
-    private List<string> sequence3Runes;
-    private List<string> sequence3SelectedRunes;
-    [HideInInspector] public bool puzzleComplete;
 
     // Sequence 25 variables
-    [SerializeField] private GameObject padLock;
-    [SerializeField] private List<Texture> runePics;
-    private int currentCombo;
+    
 
     // Materials
     // private Material lightBlue_Material;
     // private Material black_Material;
-
-    [SerializeField] private Material lightBlue_Material;
-    [SerializeField] private Material black_Material;
 
     private void Start()
     {
         cam = Camera.main;
 
         lookingBehind = false;
+        canRotate = true;
         controller = GetComponent<CharacterController>();
         camController = cam.GetComponent<CharacterController>();
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
@@ -63,10 +58,7 @@ public class Player : MonoBehaviour
         layerMask = LayerMask.GetMask("Interactable", "Character");
 
         // TEMP
-        sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
-        sequence3SelectedRunes = new List<string>();
-        puzzleComplete = false;
-        currentCombo = 0;
+        
 
         print(cursor);
 
@@ -96,17 +88,26 @@ public class Player : MonoBehaviour
             camController.Move(dreamMoveDir);
         }
 
-        //Camera Look
-        //FIX DREAMING ROTATION
-        if (!dreaming)
+        if (canRotate)
         {
-            cam.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
-            transform.Rotate(Vector3.up * cameraRot.x);
+            UnityEngine.Cursor.visible = false;
+            UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+            //Camera Look
+            if (!dreaming)
+            {
+                cam.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
+                transform.Rotate(Vector3.up * cameraRot.x);
+            }
+            else
+            {
+                cam.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
+                //cam.transform.Rotate(Vector3.up * cameraRot.x);
+            }
         }
         else
         {
-            cam.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
-            //cam.transform.Rotate(Vector3.up * cameraRot.x);
+            UnityEngine.Cursor.visible = true;
+            UnityEngine.Cursor.lockState = CursorLockMode.Confined;
         }
     }
 
@@ -203,6 +204,7 @@ public class Player : MonoBehaviour
         {
             cam.transform.parent = transform;
         }
+        cam.GetComponent<CameraTPer>().enabled = dreaming;
         SequenceManager.Instance.ShowDreamObjects(dreaming);
 
     }
@@ -213,90 +215,15 @@ public class Player : MonoBehaviour
         if (aimingAtDO)
         {
             Debug.Log("Interacted with " + hit.collider.gameObject.name);
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-            if (SequenceManager.Instance.GetSequenceNumber() == 1 && hit.collider.gameObject.tag == "rune") //Sequence 3
-            {
-                // Debug.Log("We are in sequnence 3!"); 
-                Sequence3Puzzle(hit.collider.gameObject.name);
-            }
-
-            if (hit.collider.gameObject.name == "Padlock") //Sequence 25
-            {
-                Debug.Log("We are IN!!!!");
-                padLock.SetActive(true);
-            }
+            interactable?.Interact();
 
         }
 
     }
-
-    #region Seqeunce 3 methods
-    // Handles sequence 3 puzzle
-    // Checks if the runes they have interacted with are in the list and tells us when the puzzle is complete
-    private void Sequence3Puzzle(string objectName)
-    {
-        // Debug.Log(objectName);
-
-        if (sequence3Runes.Contains(objectName))
-        {
-            sequence3SelectedRunes.Add(objectName);
-            GameObject.Find(objectName + "(hint)").GetComponent<MeshRenderer>().material = lightBlue_Material;
-            Debug.Log("Correct!!!!!");
-        }
-
-        else
-        {
-
-            foreach (string rune in sequence3SelectedRunes)
-            {
-                GameObject.Find(rune + "(hint)").GetComponent<MeshRenderer>().material = black_Material;
-                Debug.Log(rune + "(hint)");
-            }
-
-            sequence3SelectedRunes.Clear();
-            Debug.Log("Not correct");
-        }
-
-        if (sequence3SelectedRunes.Count == 3)
-        {
-            Debug.Log("Puzzle complete");
-            puzzleComplete = true;
-        }
-    }
-    #endregion
 
     #region Sequence 25 methods
-    private void Sequence25Door()
-    {
-
-    }
-
-    public void PadlockUp()
-    {
-        if (currentCombo + 1 == 8)
-        {
-            currentCombo = 0;
-        }
-        else
-        {
-            currentCombo++;
-        }
-        Debug.Log(currentCombo);
-        GameObject.Find("RunePic").GetComponent<RawImage>().texture = runePics[currentCombo];
-    }
-
-    public void PadlockDown()
-    {
-        if (currentCombo - 1 == -1)
-        {
-            currentCombo = 7;
-        }
-        else
-        {
-            currentCombo--;
-        }
-
-        GameObject.Find("RunePic").GetComponent<RawImage>().texture = runePics[currentCombo];
-    }
+    
     #endregion
 }
