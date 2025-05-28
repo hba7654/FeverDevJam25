@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class Monster : MonoBehaviour
 {
@@ -6,14 +8,21 @@ public class Monster : MonoBehaviour
     [SerializeField] Material visible;
     [SerializeField] Material invisible;
 
+    [Header("Vignette Settings")]
+    [SerializeField] VolumeProfile volumeProfile;
+    [SerializeField] float maxDistanceFromPlayer;
+    [SerializeField] float minDistanceFromPlayer;
+
     private bool canMove;
     private bool forceFreeze;
+    private float distanceToPlayer;
+    private Vignette vignette;
 
     public Player player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+        print("found vignette? " + volumeProfile.TryGet<Vignette>(out vignette));
     }
 
     public void ForceFreeze(bool val)
@@ -39,6 +48,12 @@ public class Monster : MonoBehaviour
         {
             GetComponent<Renderer>().material = invisible;
         }
+
+        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position)/(maxDistanceFromPlayer - minDistanceFromPlayer);
+
+        vignette.intensity.value = Mathf.Clamp(1 - distanceToPlayer, 0f, 1f);
+        //vignette.intensity.
+        print("mons is " + distanceToPlayer + " away, vignette strength is " + vignette.intensity);
     }
 
     private void OnBecameVisible()

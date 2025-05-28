@@ -149,8 +149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910f52462fda5f945ad87aa7039aa7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   speed: 2
   visible: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   invisible: {fileID: 2100000, guid: 71867a3ba3e6e7a459301f7fc5080e7e, type: 2}
-  forceFreeze: 0
+  volumeProfile: {fileID: 11400000, guid: b4fdb178aaf361b42aafdb824d3bb876, type: 2}
+  maxDistanceFromPlayer: 10
+  minDistanceFromPlayer: 0
+  player: {fileID: 0}
