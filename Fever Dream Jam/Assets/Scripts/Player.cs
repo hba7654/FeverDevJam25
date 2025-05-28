@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
             if (!dreaming)
             {
                 cam.transform.localRotation = Quaternion.Euler(xRot, lookingBehind ? 180 : 0, 0);
-                transform.Rotate(Vector3.up * cameraRot.x);
+                transform.localRotation = Quaternion.Euler(0, yRot, 0);
             }
             else
             {
