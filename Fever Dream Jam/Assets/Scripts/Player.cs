@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.UIElements;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -33,10 +34,14 @@ public class Player : MonoBehaviour
     private RaycastHit hit;
     private Ray ray;
 
+
+    [SerializeField] private GameObject globalVolumeGO;
+    private Volume[] volumes;
+
     // Temporary Sequence variables 
 
     // Sequence 25 variables
-    
+
 
     // Materials
     // private Material lightBlue_Material;
@@ -57,7 +62,7 @@ public class Player : MonoBehaviour
 
         layerMask = LayerMask.GetMask("Interactable", "Character");
 
-        // TEMP
+        volumes = globalVolumeGO.GetComponents<Volume>();
         
 
         print(cursor);
@@ -211,6 +216,9 @@ public class Player : MonoBehaviour
         cam.GetComponent<CameraTPer>().enabled = dreaming;
         cam.GetComponent<BoxCollider>().enabled = dreaming;
         SequenceManager.Instance.ShowDreamObjects(dreaming);
+
+        volumes[0].weight = dreaming ? 0.5f : 1;
+        volumes[1].enabled = dreaming;
 
     }
 
