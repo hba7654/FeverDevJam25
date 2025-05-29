@@ -24,6 +24,8 @@ public class Sequence_3 : Sequence
         sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
         sequence3SelectedRunes = new List<string>();
         seq3Complete = false;
+
+        SpawnMonster();
     }
 
     public void Sequence3Puzzle(string objectName)
