@@ -86,11 +86,11 @@ public class Player : MonoBehaviour
         else
         {
             Vector3 dreamMoveDir = cam.transform.TransformDirection(
-                moveInput.x * moveSpeed * Time.deltaTime,
+                moveInput.x * moveSpeed/100 * Time.deltaTime,
                 0,
-                moveInput.y * moveSpeed * Time.deltaTime);
+                moveInput.y * moveSpeed/100 * Time.deltaTime);
             //dreamMoveDir.y = 0;
-            camController.SimpleMove(dreamMoveDir);
+            camController.Move(dreamMoveDir);
         }
 
         if (canRotate)
