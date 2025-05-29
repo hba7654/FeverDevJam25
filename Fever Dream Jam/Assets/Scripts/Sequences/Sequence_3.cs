@@ -52,7 +52,7 @@ public class Sequence_3 : Sequence
             Debug.Log("Not correct");
         }
 
-        if (sequence3SelectedRunes.Count == 3)
+        if (sequence3SelectedRunes.Count == 4)
         {
             Debug.Log("Puzzle complete");
             seq3Complete = true;

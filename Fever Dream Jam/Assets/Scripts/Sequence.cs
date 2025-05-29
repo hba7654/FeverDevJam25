@@ -49,12 +49,19 @@ public class Sequence : MonoBehaviour
     public void SpawnMonster()
     {
         //if (monsterInstance != null)
-      //  {
-            monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity).GetComponent<Monster>();
-            monsterInstance.player = player;
-      //  }
+        //  {
+        monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity).GetComponent<Monster>();
+        monsterInstance.player = player;
+        //  }
 
         print(monsterInstance);
+    }
+
+    // Destroys the monster
+    // Use after the user completes a puzzle so they move on
+    public void DestroyMonster()
+    {
+       Destroy(monsterInstance.gameObject);
     }
 
     public void ShowDO(bool val)
