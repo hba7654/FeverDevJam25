@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         //Movement - awake
         if (!dreaming)
         {
-            controller.Move(transform.TransformDirection(
+            controller.SimpleMove(transform.TransformDirection(
                 moveInput.x * moveSpeed * Time.deltaTime,
                 0,
                 moveInput.y * moveSpeed * Time.deltaTime));
@@ -90,7 +90,7 @@ public class Player : MonoBehaviour
                 0,
                 moveInput.y * moveSpeed * Time.deltaTime);
             //dreamMoveDir.y = 0;
-            camController.Move(dreamMoveDir);
+            camController.SimpleMove(dreamMoveDir);
         }
 
         if (canRotate)

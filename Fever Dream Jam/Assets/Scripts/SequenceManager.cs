@@ -63,6 +63,6 @@ public class SequenceManager : MonoBehaviour
 
     public void ShowDreamObjects(bool show)
     {
-        curSequence.transform.GetChild(0).gameObject.SetActive(show);
+        curSequence.ShowDO(show);
     }
 }

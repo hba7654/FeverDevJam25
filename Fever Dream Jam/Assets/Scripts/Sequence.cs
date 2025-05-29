@@ -53,4 +53,9 @@ public class Sequence : MonoBehaviour
 
         print(monsterInstance);
     }
+
+    public void ShowDO(bool val)
+    {
+        sequenceDreamItems.SetActive(val);
+    }
 }
