@@ -217,7 +217,7 @@ public class Player : MonoBehaviour
         cam.GetComponent<BoxCollider>().enabled = dreaming;
         SequenceManager.Instance.ShowDreamObjects(dreaming);
 
-        volumes[0].weight = dreaming ? 0.5f : 1;
+        volumes[0].weight = dreaming ? 0.75f : 1;
         volumes[1].enabled = dreaming;
 
     }
