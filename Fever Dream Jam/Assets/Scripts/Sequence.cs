@@ -15,6 +15,7 @@ public class Sequence : MonoBehaviour
     [SerializeField] private GameObject sequenceDreamItems;
 
 
+    [SerializeField] protected UnityEvent OnSequenceStarted;
     [SerializeField] protected UnityEvent OnPuzzleCompleted;
     [SerializeField] protected UnityEvent OnStep1Completed;
 
@@ -23,6 +24,8 @@ public class Sequence : MonoBehaviour
     void Start()
     {
         monsterInstance = null;
+
+        OnSequenceStarted?.Invoke();
     }
 
     // Update is called once per frame
