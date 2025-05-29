@@ -45,10 +45,12 @@ public class Sequence : MonoBehaviour
 
     public void SpawnMonster()
     {
-        if (monsterInstance != null)
-        {
+        //if (monsterInstance != null)
+      //  {
             monsterInstance = Instantiate(monsterGO, monsterSpawnPoint.position, Quaternion.identity).GetComponent<Monster>();
             monsterInstance.player = player;
-        }
+      //  }
+
+        print(monsterInstance);
     }
 }

@@ -53,7 +53,7 @@ public class Monster : MonoBehaviour
 
         vignette.intensity.value = Mathf.Clamp(1 - distanceToPlayer, 0f, 1f);
         //vignette.intensity.
-        print("mons is " + distanceToPlayer + " away, vignette strength is " + vignette.intensity);
+        //print("mons is " + distanceToPlayer + " away, vignette strength is " + vignette.intensity);
     }
 
     private void OnBecameVisible()

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class Sequence_25 : Sequence
 
     private int index = 0;
     private int[] currentCombo = { 0, 0, 0, 0 };
+    private int[] correctCombo = { 2, 3, 5, 7 };
 
     public void SetIndex(int val)
     {
@@ -17,7 +19,25 @@ public class Sequence_25 : Sequence
 
     private void Sequence25Door()
     {
+        // Check to see if the current combo is correct
+        // Any combo of the 4 correct runes is right and will open the door
+        foreach (int rune in correctCombo)
+        {
+            if (currentCombo.Contains(rune))
+            {
+                print("ok looking good");
 
+            }
+            else
+            {
+                print("NOPE the combo is wrong");
+                return;
+            }
+
+        }
+
+        print("Yeah thats the right combo right there alright alright alright");
+        OnStep1Completed.Invoke();
     }
 
     public void PadlockUp(RawImage img)
@@ -34,8 +54,10 @@ public class Sequence_25 : Sequence
         currentCombo[index]++;
         currentCombo[index] %= 8;
 
-        Debug.Log(currentCombo[index]);
+        //print(currentCombo[index]);
         img.texture = runePics[currentCombo[index]];
+
+        Sequence25Door();
     }
 
     public void PadlockDown(RawImage img)
@@ -48,8 +70,12 @@ public class Sequence_25 : Sequence
         {
             currentCombo[index]--;
         }
-        print(currentCombo[index]);
+        // print(currentCombo[index]);
 
         img.texture = runePics[currentCombo[index]];
+
+        Sequence25Door();
     }
+
+
 }
