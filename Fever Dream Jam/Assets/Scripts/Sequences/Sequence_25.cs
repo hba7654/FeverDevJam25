@@ -37,7 +37,7 @@ public class Sequence_25 : Sequence
         }
 
         print("Yeah thats the right combo right there alright alright alright");
-        OnStep1Completed.Invoke();
+        OnStep1Completed?.Invoke();
     }
 
     public void PadlockUp(RawImage img)

@@ -5434,7 +5434,7 @@ MonoBehaviour:
   dreaming: 0
   canRotate: 0
   puzzleComplete: 0
-  moveSpeed: 5
+  moveSpeed: 500
   mouseSensitivity: 5
   cursor: {fileID: 486424756}
   globalVolumeGO: {fileID: 832575517}

@@ -18,15 +18,15 @@ public class LightController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float duration = Random.Range(0.1f, 5.0f);
+        float duration = Random.Range(5f, 10f);
         float t = 0f;
         
         float startIntensity = myLight.intensity;
-         float targetIntensity = Random.Range(minIntensity, maxIntensity);
+        float targetIntensity = Random.Range(minIntensity, maxIntensity);
 
         while (t < duration)
         {
-              myLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, t / duration);
+            myLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, t / duration);
             myLight.intensity = Random.Range(minIntensity, maxIntensity);
             t += Time.deltaTime;
             
