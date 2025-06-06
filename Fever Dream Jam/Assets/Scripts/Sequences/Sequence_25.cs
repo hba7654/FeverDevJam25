@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class Sequence_25 : Sequence
 {
+    [SerializeField] private Material glowMat;
     [SerializeField] private List<Texture> runePics;
 
     [SerializeField] private List<GameObject> inguzRunes;
@@ -143,8 +145,19 @@ public class Sequence_25 : Sequence
 
     public void RuneCaptured(GameObject rune)
     {
+        StartCoroutine(HandleRuneGlow(rune));
+    }
+
+    private IEnumerator HandleRuneGlow(GameObject rune)
+    {
+        var mat = rune.GetComponent<Renderer>();
+
+        mat.material = glowMat;
+        yield return new WaitForSeconds(2);
         inguzRunes.Remove(rune);
         rune.SetActive(false);
+
+        Sequence25Puzzle();
     }
 
 }

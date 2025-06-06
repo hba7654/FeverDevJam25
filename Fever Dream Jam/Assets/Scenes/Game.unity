@@ -286,18 +286,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &28980964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7cfb03c79d86d5240847de50a3a15c4e, type: 3}
@@ -853,18 +841,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 105327926}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1470,18 +1446,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 143909487}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2481,18 +2445,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 227058234}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6581,18 +6533,6 @@ MonoBehaviour:
           m_StringArgument: Inguz (first)
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Inguz (first)
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &529077807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9241,18 +9181,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &749486869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10276,18 +10204,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 848889794}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11482,6 +11398,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  glowMat: {fileID: 2100000, guid: bfc3dbf5502bfc24ea97050596469184, type: 2}
   runePics:
   - {fileID: 2800000, guid: 445ab7798e76e2844bed0ce440381680, type: 3}
   - {fileID: 2800000, guid: e1a5123488ac13f41a0b46d71b86b54f, type: 3}
@@ -11926,18 +11843,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1003940844}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13189,18 +13094,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1140394336}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15300,18 +15193,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &1374911436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15974,18 +15855,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1450305803}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19007,18 +18876,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &1694350802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19093,18 +18950,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1702251429}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 983093794}
-        m_TargetAssemblyTypeName: Sequence_25, Assembly-CSharp
-        m_MethodName: Sequence25Puzzle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
