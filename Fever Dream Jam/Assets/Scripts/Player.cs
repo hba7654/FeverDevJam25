@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private float yRot = 0;
     private bool lookingBehind;
     private bool aimingAtDO;
+    private bool flashlightOn;
     private GameObject dreamItems;
 
     [HideInInspector] public bool dreaming;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private UnityEngine.UI.Image cursor;
+    [SerializeField] private GameObject flashlight;
 
 
     private LayerMask layerMask;
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
 
         lookingBehind = false;
         canRotate = true;
+        flashlightOn = false;
         controller = GetComponent<CharacterController>();
         camController = cam.GetComponent<CharacterController>();
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
@@ -232,6 +235,16 @@ public class Player : MonoBehaviour
 
             interactable?.Interact();
 
+        }
+
+    }
+
+    public void OnFlashlight(InputValue inputValue)
+    {
+        if (!dreaming)
+        {
+            flashlightOn = !flashlightOn;
+            flashlight.SetActive(flashlightOn);
         }
 
     }
