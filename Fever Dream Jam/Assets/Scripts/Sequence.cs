@@ -21,10 +21,11 @@ public class Sequence : MonoBehaviour
 
     public static Monster monsterInstance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
         monsterInstance = null;
 
+        print("Invoking StartSequence");
         OnSequenceStarted?.Invoke();
     }
 

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Sequence_25 : Sequence
 {
-    //[SerializeField] private GameObject padLock;
     [SerializeField] private List<Texture> runePics;
 
     [SerializeField] private List<GameObject> inguzRunes;
@@ -16,8 +16,9 @@ public class Sequence_25 : Sequence
     private int[] currentCombo = { 0, 0, 0, 0 };
     private int[] correctCombo = { 2, 3, 5, 7 };
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         inguzRunesLeft = new List<GameObject>(inguzRunes);
     }
     public void SetIndex(int val)

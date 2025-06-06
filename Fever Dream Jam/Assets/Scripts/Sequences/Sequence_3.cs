@@ -19,8 +19,10 @@ public class Sequence_3 : Sequence
     //The '?' is making sure OnStepXCompleted is not null, the same as
     //  doing if(OnStepXCompleted != null) {OnStepXCompleted.Invoke();}
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         sequence3Runes = new List<string> { "Inguz", "Wunjo", "Othilla", "Algiz" };
         sequence3SelectedRunes = new List<string>();
         seq3Complete = false;
