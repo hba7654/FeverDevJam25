@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private float xRot = 0;
     private float yRot = 0;
     private bool lookingBehind;
+    private bool sprinting;
     private bool aimingAtDO;
     private bool flashlightOn;
     private GameObject dreamItems;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public bool puzzleComplete;
 
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float sprintMult;
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private UnityEngine.UI.Image cursor;
     [SerializeField] private GameObject flashlight;
@@ -54,6 +56,7 @@ public class Player : MonoBehaviour
         cam = Camera.main;
 
         lookingBehind = false;
+        sprinting = false;
         canRotate = true;
         flashlightOn = false;
         controller = GetComponent<CharacterController>();
@@ -81,9 +84,9 @@ public class Player : MonoBehaviour
         if (!dreaming)
         {
             controller.SimpleMove(transform.TransformDirection(
-                moveInput.x * moveSpeed * Time.deltaTime,
+                moveInput.x * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1),
                 0,
-                moveInput.y * moveSpeed * Time.deltaTime));
+                moveInput.y * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1)));
         }
         //Movement - dreaming
         else
@@ -199,6 +202,10 @@ public class Player : MonoBehaviour
     public void OnLookBehind(InputValue inputValue)
     {
         lookingBehind = inputValue.isPressed;
+    }
+    public void OnSprint(InputValue inputValue)
+    {
+        sprinting = inputValue.isPressed;
     }
 
     public void OnDream(InputValue inputValue)

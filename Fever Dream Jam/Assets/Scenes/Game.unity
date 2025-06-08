@@ -8155,6 +8155,7 @@ MonoBehaviour:
   canRotate: 0
   puzzleComplete: 0
   moveSpeed: 500
+  sprintMult: 2
   mouseSensitivity: 5
   cursor: {fileID: 486424756}
   flashlight: {fileID: 2127059304}
@@ -11659,7 +11660,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -11724,13 +11725,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999084477}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.53781474, z: -0, w: 0.8430631}
+  m_LocalRotation: {x: 0, y: 0.8872927, z: 0, w: 0.46120676}
   m_LocalPosition: {x: 5.2403, y: 2.2389505, z: 0.4261}
-  m_LocalScale: {x: 0.20962152, y: -0.004473693, z: 0.31387737}
+  m_LocalScale: {x: -0.2, y: 0.005, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1313816614}
-  m_LocalEulerAnglesHint: {x: 0, y: -65.07, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 125.07, z: 0}
 --- !u!114 &999084482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13942,7 +13943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ed791d5c52af4da453e33d3cdcde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingSequenceNum: 2
+  startingSequenceNum: 3
   sequences:
   - {fileID: 2015792832}
   - {fileID: 478307244}
