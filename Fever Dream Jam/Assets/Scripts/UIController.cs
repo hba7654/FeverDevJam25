@@ -10,6 +10,7 @@ public class UIController : MonoBehaviour
 
     public bool paused = false;
     public bool journal = false;
+    public bool inUI = false;
     private PlayerInput controller;
 
     private int currentSequenceNum;
@@ -54,7 +55,7 @@ public class UIController : MonoBehaviour
         journal = false;
         paused = !paused;
 
-        Freeze(paused);
+        Freeze(paused || inUI);
         //Cursor.visible = paused;
         //if (paused) { Cursor.lockState = CursorLockMode.None;}
         //else { Cursor.lockState = CursorLockMode.Locked; }
@@ -71,6 +72,10 @@ public class UIController : MonoBehaviour
     {
         player.canRotate = !val;
         Sequence.monsterInstance?.ForceFreeze(val);
+    }
+    public void OpenedUI(bool val)
+    {
+        inUI = val;
     }
 
     public void SwitchJournalPage(bool val) 

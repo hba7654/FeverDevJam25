@@ -138,6 +138,7 @@ public class Sequence_25 : Sequence
         else 
         {
             print("complete SIRRRRRRRRRR");
+            player.puzzleComplete = true;
             OnPuzzleCompleted?.Invoke();
         }
 

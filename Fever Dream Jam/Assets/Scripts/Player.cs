@@ -80,27 +80,28 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //Movement - awake
-        if (!dreaming)
-        {
-            controller.SimpleMove(transform.TransformDirection(
-                moveInput.x * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1),
-                0,
-                moveInput.y * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1)));
-        }
-        //Movement - dreaming
-        else
-        {
-            Vector3 dreamMoveDir = cam.transform.TransformDirection(
-                moveInput.x * moveSpeed/100 * Time.deltaTime,
-                0,
-                moveInput.y * moveSpeed/100 * Time.deltaTime);
-            //dreamMoveDir.y = 0;
-            camController.Move(dreamMoveDir);
-        }
 
         if (canRotate)
         {
+            //Movement - awake
+            if (!dreaming)
+            {
+                controller.SimpleMove(transform.TransformDirection(
+                    moveInput.x * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1),
+                    0,
+                    moveInput.y * moveSpeed * Time.deltaTime * (sprinting ? sprintMult : 1)
+                    ));
+            }
+            //Movement - dreaming
+            else
+            {
+                Vector3 dreamMoveDir = cam.transform.TransformDirection(
+                    moveInput.x * moveSpeed / 100 * Time.deltaTime,
+                    0,
+                    moveInput.y * moveSpeed / 100 * Time.deltaTime);
+                //dreamMoveDir.y = 0;
+                camController.Move(dreamMoveDir);
+            }
             UnityEngine.Cursor.visible = false;
             UnityEngine.Cursor.lockState = CursorLockMode.Locked;
             //Camera Look
