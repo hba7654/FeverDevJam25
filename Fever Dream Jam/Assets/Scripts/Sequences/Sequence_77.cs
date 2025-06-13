@@ -8,6 +8,7 @@ public class Sequence_77 : Sequence
     [SerializeField] private Light[] lights;
     [SerializeField] private Wire[] wires;
     [SerializeField] private float dimSpeed;
+    [SerializeField] private float newIntenisty;
     [SerializeField] private Transform canvas1Transform;
     [SerializeField] private Transform canvas2Transform;
 
@@ -37,6 +38,7 @@ public class Sequence_77 : Sequence
         {
             print("all done");
             player.puzzleComplete = true;
+            StartCoroutine(TurnOnLights());
             OnPuzzleCompleted?.Invoke();
         }
         success = true;
@@ -63,7 +65,7 @@ public class Sequence_77 : Sequence
         float curIntensity = 0;
         //foreach (Light light in lights) { light.GetComponent<LightController>().enabled = true; }
 
-        while (curIntensity >= 10)
+        while (curIntensity <= newIntenisty)
         {
             foreach (Light light in lights)
             {
@@ -75,7 +77,7 @@ public class Sequence_77 : Sequence
         foreach (Light light in lights) 
         { 
             light.enabled = true;
-            light.intensity = 10;
+            light.intensity = newIntenisty;
         }
     }
 }

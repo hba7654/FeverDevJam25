@@ -21008,6 +21008,7 @@ MonoBehaviour:
   - {fileID: 119344023}
   - {fileID: 1779209295}
   dimSpeed: 10
+  newIntenisty: 5
   canvas1Transform: {fileID: 1756196674}
   canvas2Transform: {fileID: 273149435}
 --- !u!1 &1871846868
